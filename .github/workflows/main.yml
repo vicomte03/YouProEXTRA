@@ -298,12 +298,7 @@ jobs:
           cd YTFlags
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
           mv packages/*.deb ${{ github.workspace }}/ytflags.deb
-
-      - name: Build IAmYouTube
-        run: |
-          cd IAmYouTube
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/imyt.deb
+          
 
       - name: Build YTVideoErrorAlert
         if: ${{ inputs.ytvid }}
